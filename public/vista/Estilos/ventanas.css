@@ -4,3 +4,23 @@
 	font-family: century gothic;
 	text-align: center;
 }
+body{
+    background-image: url("../imagenes/fondo_Formulario.jpg");
+    overflow-x: hidden;
+    overflow-y: hidden;
+	background-size:41cm 20cm; 
+}
+#boton>input{
+    margin-top: 70px;
+    margin-right: 100px;
+    font-size: 20px;
+    font-family: Tahoma;
+    color: snow;
+    background-color: rgba(83, 80, 80, 0);
+}
+h1{
+    font-family: Gothic ;
+    margin-top: 15px;
+    font-size: 50px;
+    color: snow;
+}

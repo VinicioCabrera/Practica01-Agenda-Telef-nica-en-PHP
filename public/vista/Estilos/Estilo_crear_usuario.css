@@ -12,6 +12,7 @@ body{
     background-attachment: fixed;
     margin: 0;
     font-family: monospace;
+   
 }
 
 form{
@@ -23,7 +24,7 @@ form{
     margin-bottom: 300x;
     border-radius: 10px;
     font-weight: bold;
-    margin-top: 50px;
+    margin-top: 15px;
     box-shadow: 10px 5px 10px black;
 }
 label{
@@ -36,8 +37,10 @@ label{
 
 }
 h1{
-    font-size:25px;
+    font-size:50px;
     font-family:gothic;
+     color: floralwhite;
+
 }
 
 input,textarea,select{
@@ -59,4 +62,7 @@ input,textarea,select{
     border-radius: 25px;
     margin-bottom: 10px;
     text-align: center;
+}
+header{
+    margin-top: 10px;
 }

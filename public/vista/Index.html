@@ -2,24 +2,26 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="Disenio.css">
+    <link rel="stylesheet" href="../vista/Estilos/Disenio.css">
     <link rel="icon" type="image/png" href="../vista/imagenes/icono.png" sizes="16x16">
     <title>Agenda Telefónica</title>
 
 </head>
 
 <body>
-    <header> 
+    <header>  
         <h1>AGENDA TELEFONICA</h1>
     </header>
     
     <form id="Agenda" method="POST" action="">
         <input type="text" id="user" name="user" placeholder="Ingresar usuario">
         <input type="password" id="login" name="login" placeholder="Ingresar contraseña">
-        <div id="boton">
-        <input type="submit" id="ingresar" name="ingresar" placeholder="INGRESAR">
+
+        <div id="boton" >   
+        <input type="submit" id="ingresar" name="ingresar" value="INICIAR" >
+        <input type="button" id="registrar" name="registrar" value="REGISTRAR" onclick="location.href='crear_Usuario.html';">
         </div>
+
     </form>
 </body>  
-
 </html>

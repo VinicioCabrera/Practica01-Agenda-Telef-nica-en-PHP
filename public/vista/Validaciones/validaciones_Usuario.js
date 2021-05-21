@@ -19,8 +19,8 @@ if (elemento.id == 'direccion') {
     document.getElementById('mensajeDireccion').innerHTML = '<br>La dirección esta vacía'
 } 
 
-if (elemento.id == 'telefono') {
-    document.getElementById('mensajeTelefono').innerHTML = '<br>El teléfono está vacío'
+if (elemento.id == 'tipo') {
+    document.getElementById('mensajeTipo').innerHTML = '<br>El campo tipo persona esta vacío'
 }
 
 if (elemento.id == 'correo') {
@@ -118,4 +118,8 @@ function validarTelefono(elemento){
  return false
         }
     }
+
 }
+    function limpiar() {
+            location.reload();
+        }

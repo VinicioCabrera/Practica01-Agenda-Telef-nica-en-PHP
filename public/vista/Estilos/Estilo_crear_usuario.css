@@ -14,33 +14,44 @@ body{
     font-family: monospace;
 }
 
-
-
-
 form{
     width:500px;
     margin: auto;
-    background: rgb(51, 71, 78);
+    background: rgba(33, 35, 77, 0.568);
     padding: 10px 20px;
     box-sizing: border-box;
     margin-bottom: 300x;
     border-radius: 10px;
     font-weight: bold;
+    margin-top: 50px;
 }
 label{
-    color:rgb(17, 17, 17);
+    color:rgb(253, 246, 246);
     margin: 0;
     margin-bottom: 25px;
     font-weight: bold;
     font-size:20px;
+    font-family:gothic;
+
 }
 
-input,textarea{
+input,textarea,select{
     width: 100%;
     margin-bottom: 20px;
     padding: 10px;
     box-sizing: border-box;
     font-size: 15px;
     font-weight: bold;
+    font-family:gothic;
+    border-radius: 25px;
 
+}
+#boton>input{
+    width: 100px;
+    height: 40px;
+    padding: 9px;
+	margin: auto;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    text-align: center;
 }

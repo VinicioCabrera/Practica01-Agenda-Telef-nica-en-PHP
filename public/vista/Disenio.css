@@ -25,7 +25,7 @@ input {
 	margin: auto;
 	margin-top: 15px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 25px;
 }
 #boton{
     width: 350px;
@@ -37,6 +37,7 @@ input {
 h1{
     margin-top: 40px;
     font-family:gothic;
+    font-size: 70px;
 }
 
 

@@ -27,6 +27,11 @@ input {
     font-size: 16px;
     border-radius: 25px;
 }
+#tipo{
+    position: relative;
+    left: 100px;
+    margin-left: 100px;
+}
 #boton{
     width: 350px;
     height: 10px;

@@ -34,6 +34,10 @@ label{
     font-family:gothic;
 
 }
+h1{
+    font-size:25px;
+    font-family:gothic;
+}
 
 input,textarea,select{
     width: 100%;

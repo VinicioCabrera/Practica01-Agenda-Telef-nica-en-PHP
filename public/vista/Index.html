@@ -12,11 +12,7 @@
     <header>  
         <h1>AGENDA TELEFONICA</h1>
     </header>
-    <?php
-    if($_GET["m"]==1){
-        echo "<script type='text/javascript'>alert('usuario creado');</script>";  
-    }
-    ?>
+    
     <form id="Agenda" method="POST" action="../controladores/Iniciar.php">
         <input type="text" id="user" name="user" placeholder="Ingresar usuario"
         onkeyup="return validarUsuarios(this)" required />

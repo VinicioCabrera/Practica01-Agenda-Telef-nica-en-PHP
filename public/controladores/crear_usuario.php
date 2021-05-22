@@ -26,7 +26,7 @@
 
   if ($conn->query($sql) === TRUE) {
   echo "<p>Se ha creado los datos personales correctamemte!!!</p>"; 
-  header("location: ../vista/Index.php?m=1");
+  header("location: ../vista/Index.html");
 
   } else if($conn->error == 1062){
   echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>"; 

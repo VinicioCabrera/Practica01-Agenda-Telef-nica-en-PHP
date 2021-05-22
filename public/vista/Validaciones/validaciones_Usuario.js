@@ -43,6 +43,34 @@ if (elemento.id == 'contrasena') {
  return campo
 }
 
+function validarCamposObligatoriosTelefono()
+{
+ var campo = true
+
+ for(var i = 0; i < document.forms[0].elements.length; i++){
+ var elemento = document.forms[0].elements[i]
+ if(elemento.value == '' && elemento.type == 'text'){
+ if(elemento.id == 'tipo'){
+ document.getElementById('mensajeTipo').innerHTML = '<br>El campo tipo teléfono esta vacio'
+} 
+if (elemento.id == 'operador') {
+    document.getElementById('mensajeOperador').innerHTML = '<br>El campo Operador esta vacío'
+} 
+if (elemento.id == 'numero') {
+    document.getElementById('mensajeNumero').innerHTML = '<br>Elcampo Número esta vacío'
+}
+
+ elemento.style.border = '1px red solid'
+ elemento.className = 'error'
+ campo = false
+ }
+ }
+
+ if(!campo){
+ alert('Error: revisar los comentarios')
+ }
+ return campo
+}
 
 
 function validarnombres(elemento){
@@ -55,7 +83,7 @@ function validarnombres(elemento){
                     if(elemento.value.length > 0){ 
                         var miAscii = elemento.value.charCodeAt(elemento.value.length-1) 
                         console.log(miAscii) 
-                        if(miAscii >= 97 && miAscii <= 122 || miAscii>=64 && miAscii<=90 || miAscii ==32){ 
+                        if(miAscii >= 97 && miAscii <= 122 || miAscii>=64 && miAscii<=90 || miAscii ==32,160,130,161,162,163,181,144,214,224,233,164,165){ 
                             return true 
                             
                         }else { 
@@ -82,7 +110,7 @@ function validarapellidos(elemento){
                 if(elemento.value.length > 0){ 
                     var miAscii = elemento.value.charCodeAt(elemento.value.length-1) 
                     console.log(miAscii) 
-                        if(miAscii >= 97 && miAscii <= 122 || miAscii>=64 && miAscii<=90 || miAscii ==32){ 
+                        if(miAscii >= 97 && miAscii <= 122 || miAscii>=64 && miAscii<=90 ||miAscii ==32,160,130,161,162,163,181,144,214,224,233,164,165){ 
                             return true 
                             
                         }else { 

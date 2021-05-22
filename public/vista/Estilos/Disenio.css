@@ -29,6 +29,16 @@ input {
     margin-bottom: 20px;
     box-sizing: border-box;
 }
+select {
+    background:white;
+    border: none;
+    font-size: 14px;
+    height: 40px;
+    padding: 5px;
+    width: calc(100% - 200px);
+    border-radius: 25px;
+ }
+ select:focus{ outline: none;}
 
 #boton{
     width: 350px;

@@ -19,7 +19,7 @@
         <h1>REGISTRAR TELEFONO</h1>
     </header>
     
- <form id="formulario01" method="POST" action="" onsubmit="return validarCamposObligatorios()">
+ <form id="formulario01" method="POST" action="" onsubmit="return validarCamposObligatoriosTelefono()">
  <label for="tipo">Tipo Teléfono (*) </label>
    <select  name="tipo" >
      <option> </option>
@@ -31,7 +31,7 @@
 
  <label for="operador">Operador(*)</label>
  <input type="text" id="operador" name="operador" value="" placeholder="Ingrese su operador de celular...." onkeyup=" " required />
- <span id="mensajeNombre" class="error"></span>
+ <span id="mensajeOperador" class="error"></span>
  <br>
  
  <label for="numero">Número (*)</label>

@@ -21,17 +21,15 @@ form{
 }
 input {
 	width: calc(100% - 200px);
-	padding: 9px;
+	padding: 10px;
 	margin: auto;
 	margin-top: 15px;
     font-size: 16px;
     border-radius: 25px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
 }
-#tipo{
-    position: relative;
-    left: 100px;
-    margin-left: 100px;
-}
+
 #boton{
     width: 350px;
     height: 10px;

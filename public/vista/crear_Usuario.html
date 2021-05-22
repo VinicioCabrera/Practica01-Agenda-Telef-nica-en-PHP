@@ -19,7 +19,7 @@
         <h1>REGISTRAR USUARIO</h1>
     </header>
     
- <form id="formulario01" method="POST" action="../controlador/crear_usuario.php" onsubmit="return validarCamposObligatorios()">
+ <form id="formulario" method="POST" action="../controladores/crear_usuario.php" onsubmit="return validarCamposObligatorios()">
  <label for="cedula">Cédula (*)</label>
  <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ... " onkeyup="" required />
  <span id="mensajeCedula" class="error"></span>
@@ -31,8 +31,7 @@
  <br>
  
  <label for="apellidos">Apellidos (*)</label>
- <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ..." 
- onkeyup="return validarapellidos(this)"required />
+ <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ..." onkeyup="return validarapellidos(this)"required />
  <span id="mensajeApellido" class="error"></span>
  <br>
 
@@ -64,6 +63,6 @@
  <input type="submit" id="crear" name="crear" value="Aceptar" />
  <input type="reset" id="cancelar" name="cancelar" value="Cancelar" onclick="limpiar()" />
 </div>
- </form>
+</form>
 </body>
 </html>

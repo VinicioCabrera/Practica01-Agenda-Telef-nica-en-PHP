@@ -19,15 +19,13 @@
         <h1>REGISTRAR TELEFONO</h1>
     </header>
     
- <form id="formulario01" method="POST" action="../controladores/crear_usuario.php" onsubmit="return validarCamposObligatorios()">
-    <div id=tipo>
-    <label for="tipo">Tipo Teléfono (*) </label>
-    <select  name="tipo" >
-        <option> </option>
-        <option>Celular</option>
-        <option>Convencional</option>
+ <form id="formulario01" method="POST" action="" onsubmit="return validarCamposObligatorios()">
+ <label for="tipo">Tipo Teléfono (*) </label>
+   <select  name="tipo" >
+     <option> </option>
+     <option>Celular</option>
+     <option>Convencional</option>
    </select>
-</div>
    <span id="mensajeTipo" class="error"></span>
     <br>
 
@@ -45,6 +43,7 @@
  <input type="submit" id="crear" name="crear" value="Aceptar" />
  <input type="reset" id="cancelar" name="cancelar" value="Cancelar" onclick="limpiar()" />
 </div>
+
  </form>
 </body>
 </html>

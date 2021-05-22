@@ -2,7 +2,7 @@
 <html>
 <head>
  <meta charset="UTF-8">
- <title>Formulario</title>
+ <title>Registrar Usuarios</title>
  <script type="text/javascript" src="../vista/Validaciones/validaciones_Usuario.js"></script>
  <link rel="icon" type="image/png" href="../vista/imagenes/icono.png" sizes="16x16">
  <link  href="../vista/Estilos/Estilo_crear_usuario.css" rel="stylesheet" />
@@ -19,29 +19,29 @@
         <h1>REGISTRAR USUARIO</h1>
     </header>
     
- <form id="formulario" method="POST" action="../controladores/crear_usuario.php" onsubmit="return validarCamposObligatorios()">
- <label for="cedula">Cédula (*)</label>
+ <form id="formulario" method="POST" action="../../public/controladores/crear_usuario.php" onsubmit="return validarCamposObligatorios()">
+ <label for="cedula">Cédula </label>
  <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ... " onkeyup="" required />
  <span id="mensajeCedula" class="error"></span>
  <br>
 
- <label for="nombres">Nombres (*)</label>
+ <label for="nombres">Nombres </label>
  <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres ..." 
  onkeyup="return validarnombres(this)" required />
  <span id="mensajeNombre" class="error"></span>
  <br>
  
- <label for="apellidos">Apellidos (*)</label>
+ <label for="apellidos">Apellidos </label>
  <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ..." onkeyup="return validarapellidos(this)"required />
  <span id="mensajeApellido" class="error"></span>
  <br>
 
- <label for="direccion">Dirección (*)</label>
+ <label for="direccion">Dirección </label>
  <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección ..."required />
  <span id="mensajeDireccion" class="error"></span>
  <br>
 
- <label for="tipo">Tipo Persona (*)</label>
+ <label for="tipo">Tipo Persona </label>
  <select  name="tipo" id="tipo">
      <option> </option>
      <option>Admin</option>
@@ -50,12 +50,12 @@
 <span id="mensajeTipo" class="error"></span>
  <br>
 
- <label for="correo">Correo electrónico (*)</label>
+ <label for="correo">Correo electrónico </label>
  <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico ..." onkeyup="" required/>
  <span id="mensajeEmail" class="error"></span>
  <br>
 
- <label for="contrasena">Contraseña (*)</label>
+ <label for="contrasena">Contraseña </label>
  <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña ..."  onkeyup="" required />
  <span id="mensajeContrasena" class="error"></span>
  <br>

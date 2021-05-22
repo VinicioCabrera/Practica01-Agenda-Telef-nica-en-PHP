@@ -1,5 +1,4 @@
-function validarCamposObligatorios()
-{
+function validarCamposObligatorios(){
  var campo = true
 
  for(var i = 0; i < document.forms[0].elements.length; i++){

@@ -148,6 +148,6 @@ function validarTelefono(elemento){
     }
 
 }
-    function limpiar() {
-            location.reload();
-        }
+function limpiar() {
+    location.reload();
+}

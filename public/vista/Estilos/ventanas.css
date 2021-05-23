@@ -7,7 +7,7 @@
 body{
     background-image: url("../imagenes/fondo_Formulario.jpg");
     overflow-x: hidden;
-    overflow-y: hidden;
+    
 	background-size:41cm 20cm; 
 }
 #boton>input{

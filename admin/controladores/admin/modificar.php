@@ -12,6 +12,9 @@
  $cedula = isset($_POST["cedula"]) ? trim($_POST["cedula"]) : null;
  $nombres = isset($_POST["nombres"]) ? mb_strtoupper(trim($_POST["nombres"]), 'UTF-8') : null;
  $apellidos = isset($_POST["apellidos"]) ? mb_strtoupper(trim($_POST["apellidos"]), 'UTF-8') : null;
+ $tipotelefono = isset($_POST["tipotelefono"]) ? mb_strtoupper(trim($_POST["tipotelefono"]), 'UTF-8') : null;
+ $operadora = isset($_POST["operadora"]) ? mb_strtoupper(trim($_POST["operadora"]), 'UTF-8') : null;
+ $numero = isset($_POST["numero"]) ? mb_strtoupper(trim($_POST["numero"]), 'UTF-8') : null;
  $direccion = isset($_POST["direccion"]) ? mb_strtoupper(trim($_POST["direccion"]), 'UTF-8') : null;
  $tipoPersona = isset($_POST["tipo"]) ? mb_strtoupper(trim($_POST["tipo"]), 'UTF-8') : null;
  $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null;
@@ -27,7 +30,17 @@
  "usu_fecha_modificacion = '$fecha' " .
  "WHERE usu_codigo = '$codigo'";
  if ($conn->query($sql) === TRUE) {
- echo "Se ha actualizado los datos personales correctamemte!!!<br>"; 
+     $sql="UPDATE telefono " .
+     "SET tel_tipo_telefono = '$tipotelefono', " .
+     "tel_operadora = '$operadora', " .
+     "tel_numero = '$numero' " .
+     "WHERE usu_codigo = $codigo ";
+     if ($conn->query($sql) === TRUE) {    
+    echo "Se ha actualizado los datos telfonicos correctamemte!!!<br>"; 
+    } else { 
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>"; 
+    }
+     echo "Se ha actualizado los datos personales correctamemte!!!<br>"; 
  } else { 
  echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>"; 
  }

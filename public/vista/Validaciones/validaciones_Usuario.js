@@ -150,3 +150,4 @@ function validarTelefono(elemento){
 function limpiar() {
     location.reload();
 }
+

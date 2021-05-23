@@ -13,12 +13,13 @@
 
 <?php
  $codigo = $_GET["codigo"];
- $sql = "SELECT * FROM usuario where usu_codigo=$codigo";
+ $sql = "SELECT * FROM usuario,telefono where usuario.usu_codigo=$codigo and telefono.usu_codigo=$codigo";
+ 
  include '../../../config/ConexionBD.php'; 
  $result = $conn->query($sql);
- 
+
  if ($result->num_rows > 0) {
- 
+
  while($row = $result->fetch_assoc()) {
 ?>
 
@@ -39,6 +40,32 @@ required placeholder="Ingrese la cedula ..."/>
  <input type="text" id="direccion" name="direccion" value="<?php echo $row["usu_direccion"]; 
 ?>" required placeholder="Ingrese la dirección ..."/>
  <br>
+
+ <label for="tipotelefono">Tipo telefono </label>
+ <select  name="tipotelefono" id="tipotelefono">
+ <?php
+     if($row["tel_tipo_telefono"]=="CELULAR"){
+         echo("<option >CELULAR</option> ");
+         echo("<option >CONVENCIONAL</option> ");
+     }else if($row["tel_tipo_telefono"]=="CONVENCIONAL"){
+        echo("<option >CONVENCIONAL</option> "); 
+        echo("<option >CELULAR</option> ");
+     }
+?>
+</select>
+<span id="mensajeTipo" class="error"></span>
+ <br>
+ <label for="operadora">Operadora</label>
+ <input type="text" id="operadora" name="operadora" value="<?php echo $row["tel_operadora"]; 
+?>" placeholder="Ingrese operadora ..."required />
+ <span id="mensajeDireccion" class="error"></span>
+ <br>
+ <label for="numero">Numero</label>
+ <input type="text" id="numero" name="numero" value="<?php echo $row["tel_numero"]; 
+?>" placeholder="Ingrese numero telefonico ..."required />
+ <span id="mensajeDireccion" class="error"></span>
+ <br>
+
 <label for="tipo">Tipo Persona (*)</label>
  <select  name="tipo" id="tipo"  >
      <?php
@@ -76,6 +103,7 @@ required placeholder="Ingrese el correo electrónico ..."/>
  echo "<p>Ha ocurrido un error inesperado !</p>";
  echo "<p>" . mysqli_error($conn) . "</p>";
  }
+
  $conn->close(); 
  ?>
 

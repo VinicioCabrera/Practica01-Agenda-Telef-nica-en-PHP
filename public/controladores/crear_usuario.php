@@ -22,18 +22,38 @@
  $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
 
   $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombres', '$apellidos', '$direccion', '$tipoPersona', 
-  '$correo', MD5('$contrasena'), 'N', null, null)"; 
+  '$correo', MD5('$contrasena'), null, null)"; 
 
   if ($conn->query($sql) === TRUE) {
   echo "<p>Se ha creado los datos personales correctamemte!!!</p>"; 
-  header("location: ../vista/Index.html");
+
+  $consulta="SELECT * FROM usuario ";
+  $res=$conn->query($consulta);
+  if($res->num_rows>0){
+     while($row = $res->fetch_assoc()){
+         $codigo = ($row["usu_codigo"]);
+     }
+  }
+ 
+  $sql = "INSERT INTO telefono VALUES (0, NULL, NULL, NULL,$codigo)"; 
+  if ($conn->query($sql) === TRUE) {
+     echo "<p>Se ha creado los datos personales correctamemte!!!</p>"; 
+   
+     } else if($conn->error == 1062){
+     echo "<p class='error'>La persona NO registrada en el sistema </p>"; 
+     }else{
+     echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
+    } 
+
+    header("location: ../vista/Index.html");
 
   } else if($conn->error == 1062){
   echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>"; 
   }else{
   echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
  } 
-  $conn->close();
+
+ $conn->close();
 
  ?>
 </body>

@@ -29,6 +29,8 @@
        }
     }else {
         $tipo="no";
+        header('location: ../vista/Index.html');
+        
     }
     $conn->close();
     if($tipo == "ADMIN"){

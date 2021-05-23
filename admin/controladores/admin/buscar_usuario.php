@@ -27,7 +27,7 @@
   </tr>";
  if ($result->num_rows > 0) { 
  while($row = $result->fetch_assoc()) {
-$codigo=$row['usu_codigo'] . "</td>";
+$codigo=$row['usu_codigo'];
 $sql1="SELECT * FROM usuario,telefono where usuario.usu_codigo=$codigo and telefono.usu_codigo=$codigo";
 $conn->query($sql1);
 echo($sql1);

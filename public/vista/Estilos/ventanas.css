@@ -12,11 +12,12 @@ body{
 }
 #boton>input{
     margin-top: 70px;
-    margin-right: 100px;
+    margin-right: 50px;
     font-size: 20px;
     font-family: Tahoma;
-    color: snow;
-    background-color: rgba(83, 80, 80, 0);
+    color: rgb(5, 5, 5);
+    background-color: rgb(255, 254, 254);
+    
 }
 h1{
     font-family: Gothic ;
@@ -24,3 +25,7 @@ h1{
     font-size: 50px;
     color: snow;
 }
+table,td, th { border: 1px solid rgb(255, 255, 255); }
+table { margin: auto; }
+td, th { width: 100px; height: 35px; }
+

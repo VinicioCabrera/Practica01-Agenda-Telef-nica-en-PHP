@@ -32,11 +32,11 @@
     }
     $conn->close();
     if($tipo == "ADMIN"){
-            header('location: ../vista/Ventana_admin.html');
+            header('location: ../vista/Ventana_admin.php');
         }else if($tipo == "USER"){
             header('location: ../vista/Ventana_user.html');
-        }else{
-           echo("Usuario Anonimo");
+        }elseif($tipo == " "){
+            header('location: ../vista/Ventana_anonima.html');
         }
 ?>
 </body>

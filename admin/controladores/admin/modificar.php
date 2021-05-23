@@ -36,7 +36,7 @@
      "tel_numero = '$numero' " .
      "WHERE usu_codigo = $codigo ";
      if ($conn->query($sql) === TRUE) {    
-    echo "Se ha actualizado los datos telfonicos correctamemte!!!<br>"; 
+    echo "Se ha actualizado los datos telefonicos correctamemte!!!<br>"; 
     } else { 
     echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>"; 
     }
@@ -44,7 +44,7 @@
  } else { 
  echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>"; 
  }
- echo "<a href='../../vista/admin/Ventana_Modificar.php'>Regresar</a>";
+ echo "<a href='../../../public/vista/Ventana_admin.php'>Regresar</a>";
 
  $conn->close();
 ?>

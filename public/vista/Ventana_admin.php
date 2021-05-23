@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../vista/Estilos/ventanas.css">
+    <script type="text/javascript" src="buscar_cedula.js"></script>
     <link rel="icon" type="image/png" href="../vista/imagenes/icono.png" sizes="16x16">
     <title>ADMINISTRADOR</title>
 </head>
@@ -11,17 +12,17 @@
         <h1>FORMULARIO</h1>
     </header>
 
-<form id="admin" method="POST" >
+<form  onsubmit="return buscarPorCedula()">
 
         <div id="boton" >   
-         
-            <input type="text" id="txtbuscar" name="txtbuscar" >
-            <input type="button" id="buscar" name="buscar" value="BUSCAR">
-            <input type="button" id="agregar" name="agregar" value="AGREGAR"onclick="location.href='crear_Usuario.html';">
-           
 
-        </div>
+            <input type="text" id="cedula" name="cedula" >
+            <input type="button" id="buscar" name="buscar" value="BUSCAR" onclick="buscarPorCedula()">
+            <input type="button" id="agregar" name="agregar" value="AGREGAR"onclick="location.href='crear_Usuario.html';">
+
+         </div>
     </form>
+    <div id="informacion"> </div>
     <br>
 <table style="width:100% " >
         <tr>
@@ -46,7 +47,7 @@
  echo " <td><font color=#FFFFFF>" . $row['usu_tipo_persona'] . "</td>";
  echo " <td><font color=#FFFFFF>" . $row['usu_correo'] . "</td>"; 
  echo " <td> <a href='../../admin/vista/admin/Ventana_Modificar.php?codigo=" . $row['usu_codigo']."'>Actualizar</a> </td>";
- echo " <td> <a href='eliminar.php?codigo=" . $row['usu_codigo'] ."'>Eliminar</a> </td>";
+ echo " <td> <a href='../../admin/vista/admin/Ventana_Eliminar.php?codigo=" . $row['usu_codigo'] ."'>Eliminar</a> </td>";
  echo " <td> <a href='../../admin/vista/admin/cambiar_contrasena.php?codigo=". $row['usu_codigo'] ."'>Cambiar Contraseña</a> </td>";
  echo "</tr>";
  }

@@ -13,13 +13,15 @@
         <h1>AGENDA TELEFONICA</h1>
     </header>
     
-    <form id="Agenda" method="POST" action="">
-        <input type="text" id="user" name="user" placeholder="Ingresar usuario">
+    <form id="Agenda" method="POST" action="../controladores/Iniciar.php">
+        <input type="text" id="user" name="user" placeholder="Ingresar usuario"
+        onkeyup="return validarUsuarios(this)" required />
         <input type="password" id="login" name="login" placeholder="Ingresar contraseña">
 
         <div id="boton" >   
         <input type="submit" id="ingresar" name="ingresar" value="INICIAR"  >
-        <input type="button" id="registrar" name="registrar" value="REGISTRAR" onclick="location.href='Ventana_user.html';">
+        <input type="button" id="registrar" name="registrar" value="REGISTRAR" onclick="location.href='crear_usuario.html';">
+        <input type="button" id="consulta" name="consulta" value="CONSULTA" onclick="location.href='Ventana_anonima.html';">
         </div>
 
     </form>

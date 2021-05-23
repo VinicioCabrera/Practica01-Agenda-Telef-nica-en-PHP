@@ -16,7 +16,7 @@
  $tipoTelefono = $_POST["tipo"];
  $operador = isset($_POST["operador"]) ? mb_strtoupper(trim($_POST["nombres"]), 'UTF-8') : null;
  $numero = isset($_POST["numero"]) ? trim($_POST["numero"]): null;
- $sql = "INSERT INTO usuario VALUES (0, '$tipoTelefono', '$operador', '$numero', 'N', null, null)"; 
+ $sql = "INSERT INTO telefono VALUES (0, '$tipoTelefono', '$operador', '$numero',null)"; 
  if ($conn->query($sql) === TRUE) {
  echo "<p>Se ha creado los datos telefónicos correctamemte!!!</p>"; 
  } else {

@@ -7,7 +7,7 @@
 <body>
 <?php 
  //incluir conexión a la base de datos
- include '../../config/ConexionBD.php'; 
+ include '../../../config/ConexionBD.php'; 
  $codigo = $_POST["codigo"];
  $cedula = isset($_POST["cedula"]) ? trim($_POST["cedula"]) : null;
  $nombres = isset($_POST["nombres"]) ? mb_strtoupper(trim($_POST["nombres"]), 'UTF-8') : null;
@@ -31,7 +31,7 @@
  } else { 
  echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>"; 
  }
- echo "<a href='../vista/Ventana_Modificar.php'>Regresar</a>";
+ echo "<a href='../../vista/admin/Ventana_Modificar.php'>Regresar</a>";
 
  $conn->close();
 ?>

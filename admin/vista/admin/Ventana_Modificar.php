@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../public/vista/Estilos/Estilo_crear_usuario.css">
+    <link rel="stylesheet" href="../../../public/vista/Estilos/Estilo_crear_usuario.css">
     <link rel="icon" type="image/png" href="../../public/vista/imagenes/icono.png" sizes="16x16">
     <title>MODIFICAR</title>
 </head>
@@ -14,7 +14,7 @@
 <?php
  $codigo = $_GET["codigo"];
  $sql = "SELECT * FROM usuario where usu_codigo=$codigo";
- include '../../config/ConexionBD.php'; 
+ include '../../../config/ConexionBD.php'; 
  $result = $conn->query($sql);
  
  if ($result->num_rows > 0) {
@@ -22,7 +22,7 @@
  while($row = $result->fetch_assoc()) {
 ?>
 
-<form id="formulario" method="POST" action="../controladores/modificar.php" >
+<form id="formulario" method="POST" action="../../controladores/admin/modificar.php" >
 <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
  <label for="cedula">Cedula (*)</label>
  <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>"
@@ -51,7 +51,7 @@ required placeholder="Ingrese la cedula ..."/>
         echo("<option >USER</option> "); 
         echo("<option >ADMIN </option> ");
         echo("<option > </option> ");
-        
+
      }else {
         echo("<option > </option> ");
         echo("<option >USER</option> "); 

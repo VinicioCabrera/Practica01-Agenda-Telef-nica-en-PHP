@@ -5,10 +5,7 @@
 
  //echo "Hola " . $cedula; 
  
- $sql = "SELECT * FROM usuario WHERE usu_cedula='$cedula'";
-
- 
-
+ $sql = "SELECT * FROM usuario,telefono WHERE usuario.usu_cedula='$cedula' and usuario.usu_codigo=telefono.usu_codigo ";
 
 //cambiar la consulta para puede buscar por ocurrencias de letras
  $result = $conn->query($sql);
@@ -27,10 +24,7 @@
   </tr>";
  if ($result->num_rows > 0) { 
  while($row = $result->fetch_assoc()) {
-$codigo=$row['usu_codigo'];
-$sql1="SELECT * FROM usuario,telefono where usuario.usu_codigo=$codigo and telefono.usu_codigo=$codigo";
-$conn->query($sql1);
-echo($sql1);
+
  echo "<tr>"; 
  echo " <td><font color=#FFFFFF>" . $row['usu_cedula'] . "</td>";
  echo " <td><font color=#FFFFFF>" . $row['usu_nombres'] ."</td>";

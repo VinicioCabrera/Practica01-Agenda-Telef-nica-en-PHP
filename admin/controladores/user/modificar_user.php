@@ -40,11 +40,11 @@
     } else { 
     echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>"; 
     }
-    header("location:../../../public/vista/Ventana_admin.php"); 
+     echo "Se ha actualizado los datos personales correctamemte!!!<br>"; 
  } else { 
  echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>"; 
  }
- echo "<a href='../../../public/vista/Ventana_admin.php'>Regresar</a>";
+ echo "<a href='../../../public/vista/Ventana_user.php'>Regresar</a>";
 
  $conn->close();
 ?>

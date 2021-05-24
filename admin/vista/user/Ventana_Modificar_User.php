@@ -23,7 +23,7 @@
  while($row = $result->fetch_assoc()) {
 ?>
 
-<form id="formulario" method="POST" action="../../controladores/admin/modificar.php" >
+<form id="formulario" method="POST" action="../../controladores/user/modificar_user.php" >
 <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
  <label for="cedula">Cedula (*)</label>
  <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>"
@@ -93,7 +93,7 @@ required placeholder="Ingrese el correo electrónico ..."/>
  <br>
  <div id="boton">
  <input type="submit" id="modificar" name="modificar" value="Modificar" />
- <input type="reset" id="cancelar" name="cancelar" value="Cancelar" onclick="location.href='../../../public/vista/Ventana_admin.php';" />
+ <input type="reset" id="cancelar" name="cancelar" value="Cancelar" onclick="location.href='../../../public/vista/Ventana_user.php';"/>
  </div>
 </form>
 

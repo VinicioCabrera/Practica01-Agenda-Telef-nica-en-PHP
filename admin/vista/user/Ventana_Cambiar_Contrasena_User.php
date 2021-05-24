@@ -11,7 +11,7 @@
     <h1>Cambiar Contraseña</h1>
     <br>
 </header>
-<form id="cambiar" method="POST" action="../../controladores/admin/actualizar_contrasena.php">
+<form id="cambiar" method="POST" action="../../controladores/user/cambiar_contrasena_user.php">
 <?php echo('<input type="Hidden" id="codigo" name="codigo" value='.$_GET["codigo"].'>')?>
 <input type="text" id="oldcontrasena" name="oldcontrasena" placeholder="Ingresar contraseña antigua"
         onkeyup="return validarUsuarios(this)" required />
@@ -21,7 +21,7 @@
 
         <div id="boton" >   
         <input type="submit" id="cambiar" name="cambiar" value="ACTUALIZAR" >
-        <input type="reset" id="cancelar" name="cancelar" value="CANCELAR" onclick="location.href='../../../public/vista/Ventana_admin.php';">
+        <input type="reset" id="cancelar" name="cancelar" value="CANCELAR" onclick="location.href='../../../public/vista/Ventana_user.php';">
         </div>
 
     </form>

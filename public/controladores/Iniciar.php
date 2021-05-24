@@ -36,7 +36,7 @@
     if($tipo == "ADMIN"){
             header('location: ../vista/Ventana_admin.php');
         }else if($tipo == "USER"){
-            header('location: ../vista/Ventana_user.html');
+            header('location: ../vista/Ventana_user.php');
         }elseif($tipo == " "){
             header('location: ../vista/Ventana_anonima.html');
         }

@@ -19,6 +19,16 @@ body{
     background-color: rgb(255, 254, 254);
     
 }
+#buscadores>input{
+    border-radius: 25px;
+    margin-top: 70px;
+    margin-right: 50px;
+    font-size: 20px;
+    size: 10px;
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(5, 5, 5);
+    background-color: rgb(255, 254, 254);
+}
 h1{
     font-family: Gothic ;
     margin-top: 15px;
@@ -28,4 +38,16 @@ h1{
 table,td, th { border: 1px solid rgb(255, 255, 255); }
 table { margin: auto; }
 td, th { width: 100px; height: 35px; }
-
+footer{
+    background-color:rgba(128, 128, 128, 0.308);
+    position: relative;
+    top: 560px;
+    
+}
+footer>a{
+    color: rgb(255, 255, 255);
+    margin-left: 50px;
+}
+#regresa>input{
+    size: 20px;
+}

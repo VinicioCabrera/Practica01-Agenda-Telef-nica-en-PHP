@@ -31,6 +31,7 @@
   }else{
   echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
  } 
+ echo "<a href='../../vista/user/Listar.php'>Regresar</a>";
 
  $conn->close();
 

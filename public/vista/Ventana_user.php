@@ -34,13 +34,14 @@
  <?php
  
  include '../../config/ConexionBD.php'; 
- $consulta="SELECT * FROM usuario ";
+ $codigo=$_GET["codigo"];
+/* $consulta="SELECT * FROM usuario ";
   $res=$conn->query($consulta);
   if($res->num_rows>0){
      while($row = $res->fetch_assoc()){
          $codigo = ($row["usu_codigo"]);
      }
-  }
+  }*/
  
 $sql = "SELECT * FROM usuario where usu_codigo='$codigo'";
  $result = $conn->query($sql);

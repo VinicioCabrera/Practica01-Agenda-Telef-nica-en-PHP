@@ -19,7 +19,6 @@
     "tel_operadora = '$operadora', " .
     "tel_numero = '$numero' " .
     "WHERE tel_codigo = $codigo ";
-    echo($sql);
     if ($conn->query($sql) === TRUE) {    
    echo "Se ha actualizado los datos telefonicos correctamemte!!!<br>"; 
    } else { 

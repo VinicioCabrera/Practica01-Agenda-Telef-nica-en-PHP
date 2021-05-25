@@ -1,5 +1,5 @@
 
-                                                                   PRÁCTICA DE LABORATORIO 
+**PRÁCTICA DE LABORATORIO**
  
  
 **CARRERA: COMPUTACION**
@@ -17,7 +17,7 @@
 
 •	Desarrollar aplicaciones web interactivas y amigables al usuario. 
 
-                                                                          ***INSTRUCCIONES***  
+***INSTRUCCIONES***  
                                                                               
                                                                               
 Se pide desarrollar una aplicación PHP que permita implementar una agenda telefónica en donde un usuario de la aplicación podrá gestionar su información y la misma estará disponible para el público. Es decir, cada uno de estos usuarios podrá tener asignado uno o más teléfonos de contacto de diferente tipo y operador, por ejemplo: 

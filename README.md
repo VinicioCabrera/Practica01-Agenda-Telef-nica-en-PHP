@@ -200,3 +200,5 @@ h.	En el informe se debe incluir la información de GitHub (usuario y URL del re
 
  ![45](https://user-images.githubusercontent.com/49033767/119548528-e82f0000-bd5b-11eb-9d7b-8d03078c04a3.png)
  
+ ![46](https://user-images.githubusercontent.com/49033767/119566036-49f96500-bd70-11eb-8747-d4249ed734af.png)
+ 

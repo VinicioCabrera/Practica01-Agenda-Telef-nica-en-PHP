@@ -3,6 +3,7 @@
 <head>
  <meta charset="UTF-8">
  <title>Eliminar datos de persona </title>
+
 </head>
 <body>
 <?php
@@ -19,10 +20,12 @@
 $sql = "DELETE FROM telefono WHERE tel_codigo = '$codigo'";
  if ($conn->query($sql) === TRUE) { 
  echo "<p>Se ha eliminado los datos correctamemte!!!</p>"; 
+ //header('location:../../../public/vista/Ventana_user.');
  } else { 
  echo "<p>Error: " . $sql . "<br>" . mysqli_error($conn) . "</p>"; 
  }
- echo "<a href='../../vista/user/Listar.php'>Regresar</a>";
+ 
+ echo "<a href='../../../public/vista/Index.html'>Regresar</a>";
  $conn->close(); 
 ?>
 </body>

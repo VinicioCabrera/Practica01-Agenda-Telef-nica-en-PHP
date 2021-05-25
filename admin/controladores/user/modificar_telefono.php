@@ -30,7 +30,7 @@
  } else { 
  echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>"; 
  }*/
- echo "<a href='../../../public/vista/Ventana_user.php'>Regresar</a>";
+ //echo "<a href='../../../public/vista/Ventana_user.php'>Regresar</a>";
 
  $conn->close();
 ?>

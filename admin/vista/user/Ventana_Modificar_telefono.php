@@ -13,17 +13,8 @@
 
 <?php
 include '../../../config/ConexionBD.php'; 
-$consulta="SELECT * FROM telefono "; 
-$res=$conn->query($consulta);
-if($res->num_rows>0){
-   while($row = $res->fetch_assoc()){
-       $codigo = ($row["tel_codigo"]);
-   }
-}
-
- //$codigo = $_GET["codigo"];
+ $codigo = $_GET["codigo1"];
  $sql = "SELECT * FROM telefono where tel_codigo=$codigo";
- echo($sql);
  
  $result = $conn->query($sql);
 
@@ -64,7 +55,7 @@ if($res->num_rows>0){
  <div id="boton">
  <input type="submit" id="modificar" name="modificar" value="Actualizar"  />
  <!-- <input type="button" id="modificar" name="modificar" value="Modificar" onclick="location.href='../../controladores/user/modificar_telefono.php';" /> -->
- <input type="reset" id="cancelar" name="cancelar" value="Cancelar" onclick="location.href='../../../public/vista/Ventana_user.php';"/>
+ <input type="reset" id="cancelar" name="cancelar" value="Cancelar"/>
  </div>
 </form>
 

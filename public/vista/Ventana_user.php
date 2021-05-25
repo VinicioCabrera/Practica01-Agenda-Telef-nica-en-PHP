@@ -12,12 +12,13 @@
         <h1>FORMULARIO</h1>
     </header>
 
-<form id="tipo">
+<form id="tipo" method="POST" action="../../admin/vista/user/Listar.php">
 
         <div id="boton" >   
-
+            <?php echo'<input type="hidden" id="codigo" name="codigo" value="'.$_GET['codigo'].'">';?>
+            
             <!-- <input type="button" id="agregar" name="agregar" value="AGREGAR" onclick="location.href='../../admin/vista/user/Ventana_Agregar_telefono.php';"> -->
-             <input type="button" id="listar" name="listar" value="LISTAR TELEFONOS" onclick="location.href='../../admin/vista/user/Listar.php';"> 
+             <input type="submit" id="listar" name="listar" value="LISTAR TELEFONOS"> 
          </div>
     </form>
     <div id="informacion"> </div>
@@ -34,14 +35,15 @@
  <?php
  
  include '../../config/ConexionBD.php'; 
- $codigo=$_GET["codigo"];
-/* $consulta="SELECT * FROM usuario ";
-  $res=$conn->query($consulta);
-  if($res->num_rows>0){
-     while($row = $res->fetch_assoc()){
-         $codigo = ($row["usu_codigo"]);
-     }
-  }*/
+ $consulta="SELECT * FROM usuario where usu_codigo=".$_GET['codigo'];
+ $res=$conn->query($consulta);
+ if($res->num_rows>0){
+    while($row = $res->fetch_assoc()){
+        $codigo = ($row["usu_codigo"]);
+    }
+ }
+
+
  
 $sql = "SELECT * FROM usuario where usu_codigo='$codigo'";
  $result = $conn->query($sql);

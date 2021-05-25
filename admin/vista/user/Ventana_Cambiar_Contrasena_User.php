@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../../public/vista/Estilos/Estilo_crear_usuario.css">
-    <link rel="icon" type="image/png" href="../vista/imagenes/icono.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../../../public/vista/imagenes/icono.png" sizes="16x16">
     <title>Document</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
 
         <div id="boton" >   
         <input type="submit" id="cambiar" name="cambiar" value="ACTUALIZAR" >
-        <input type="reset" id="cancelar" name="cancelar" value="CANCELAR" onclick="location.href='../../../public/vista/Ventana_user.php';">
+        <input type="reset" id="cancelar" name="cancelar" value="CANCELAR" onclick="location.href='../../../public/vista/Index.html';">
         </div>
 
     </form>

@@ -62,7 +62,7 @@
  
  <div id="boton">
 <input type="submit" id="eliminar" name="eliminar" value="Eliminar" />
- <input type="reset" id="cancelar" name="cancelar" value="Cancelar" onclick="location.href='Listar.php';" />
+ <input type="reset" id="cancelar" name="cancelar" value="Cancelar"  />
     </div>
  </form> 
  <?php

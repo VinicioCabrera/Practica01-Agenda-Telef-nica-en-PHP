@@ -1,11 +1,11 @@
 <?php
  //incluir conexión a la base de datos
  include "../../../config/ConexionBD.php";
- $cedula = $_GET['cedula']; 
+ $correo = $_GET['correo']; 
 
  //echo "Hola " . $cedula; 
  
- $sql = "SELECT * FROM usuario,telefono WHERE usuario.usu_cedula='$cedula' and usuario.usu_codigo=telefono.usu_codigo ";
+ $sql = "SELECT * FROM usuario,telefono WHERE usuario.usu_correo='$correo' and usuario.usu_codigo=telefono.usu_codigo ";
 
 //cambiar la consulta para puede buscar por ocurrencias de letras
  $result = $conn->query($sql);
@@ -15,8 +15,6 @@
  <th><font color=#FFFF>CEDULA</th>
  <th><font color=#FFFF>NOMBRES</th> 
  <th><font color=#FFFF>APELLIDOS</th>
- <th><font color=#FFFF>DIRECCION</th>
- <th><font color=#FFFF>TIPO PERSONA</th> 
  <th><font color=#FFFF>CORREO</th> 
  <th><font color=#FFFF>TIPO TELEFONO</th>
  <th><font color=#FFFF>OPERADORA</th>
@@ -29,8 +27,6 @@
  echo " <td><font color=#FFFFFF>" . $row['usu_cedula'] . "</td>";
  echo " <td><font color=#FFFFFF>" . $row['usu_nombres'] ."</td>";
  echo " <td><font color=#FFFFFF>" . $row['usu_apellidos'] . "</td>";
- echo " <td><font color=#FFFFFF>" . $row['usu_direccion'] . "</td>";
- echo " <td><font color=#FFFFFF>" . $row['usu_tipo_persona'] . "</td>"; 
  echo " <td><font color=#FFFFFF>" . $row['usu_correo'] . "</td>"; 
  echo " <td><font color=#FFFFFF>" . $row['tel_tipo_telefono'] . "</td>"; 
  echo " <td><font color=#FFFFFF>" . $row['tel_operadora'] . "</td>"; 

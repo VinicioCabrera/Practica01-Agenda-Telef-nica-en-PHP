@@ -37,14 +37,17 @@
      "WHERE usu_codigo = $codigo ";
      if ($conn->query($sql) === TRUE) {    
     echo "Se ha actualizado los datos telefonicos correctamemte!!!<br>"; 
+    
     } else { 
     echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>"; 
     }
      echo "Se ha actualizado los datos personales correctamemte!!!<br>"; 
+ 
  } else { 
  echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>"; 
  }
- echo "<a href='../../../public/vista/Ventana_user.php'>Regresar</a>";
+ //echo "<a href='../../../public/vista/Index.html'>Regresar</a>";
+
 
  $conn->close();
 ?>

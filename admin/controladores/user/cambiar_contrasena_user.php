@@ -13,10 +13,11 @@ if($res->num_rows>0){
  "SET usu_password = '$contranueva' WHERE usu_codigo='$codigo' ";
  $conn->query($sql1);
  echo "<p>La contraseña se actualizado correctamente!!! </p>";
- echo "<a href='../../../public/vista/Ventana_user.php'>Regresar</a>";
+
  }else{
    echo "<p>La contraseña actual no coincide con nuestros registros!!! </p>"; 
  }
+ echo "<a href='../../../public/vista/Index.html'>Regresar</a>";
 }
 }
 $conn->close();

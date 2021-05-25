@@ -3,7 +3,7 @@
 <head>
  <meta charset="UTF-8">
  <title>Registrar Usuarios</title>
- <script type="text/javascript" src="../vista/Validaciones/validaciones_Usuario.js"></script>
+ <script type="text/javascript" src="Validaciones/validaciones_Usuario.js"></script>
  <link rel="icon" type="image/png" href="../vista/imagenes/icono.png" sizes="16x16">
  <link  href="../vista/Estilos/Estilo_crear_usuario.css" rel="stylesheet" />
  <style type="text/css">
@@ -21,13 +21,12 @@
     
  <form id="formulario" method="POST" action="../../public/controladores/crear_usuario.php" onsubmit="return validarCamposObligatorios()">
  <label for="cedula">Cédula </label>
- <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ... " onkeyup="" required />
+ <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ... " onkeyup="return validar(this)" required />
  <span id="mensajeCedula" class="error"></span>
  <br>
 
  <label for="nombres">Nombres </label>
- <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres ..." 
- onkeyup="return validarnombres(this)" required />
+ <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres ..." onkeyup="return validarnombres(this)" required />
  <span id="mensajeNombre" class="error"></span>
  <br>
  
@@ -51,12 +50,12 @@
  <br>
 
  <label for="correo">Correo electrónico </label>
- <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico ..." onkeyup="" required/>
+ <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico ..." onkeyup="return validarEmail(this)" required/>
  <span id="mensajeEmail" class="error"></span>
  <br>
 
  <label for="contrasena">Contraseña </label>
- <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña ..."  onkeyup="" required />
+ <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña ..."  onkeyup="return validar_clave(this)" required />
  <span id="mensajeContrasena" class="error"></span>
  <br>
 

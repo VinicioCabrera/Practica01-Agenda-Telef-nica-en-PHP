@@ -26,6 +26,7 @@
           echo($row["usu_password"].'<br>');
           echo($row["usu_fecha_creacion"].'<br>');
           echo($row["usu_fecha_modificacion"].'<br>');
+          $codigo=$row['usu_codigo'];
        }
     }else {
         $tipo="no";
@@ -36,10 +37,11 @@
     if($tipo == "ADMIN"){
             header('location: ../vista/Ventana_admin.php');
         }else if($tipo == "USER"){
-            header('location: ../vista/Ventana_user.php');
-        }elseif($tipo == " "){
-            header('location: ../vista/Ventana_anonima.html');
+            header('location: ../vista/Ventana_user.php?codigo='.$codigo);
+        }else if($tipo == ""){
+            header('location: ../vista/Ventana_anonima.php');
         }
+
 ?>
 </body>
 </html>

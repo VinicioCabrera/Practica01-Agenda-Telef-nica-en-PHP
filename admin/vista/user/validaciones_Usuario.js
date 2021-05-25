@@ -215,4 +215,17 @@ function validar(elemento) {
       
   }
 
+ /* function validartelefono(numeroTelefono){
+    var numeroTelefono=document.getElementById('numero');
+    var expresionRegular1=/^([0-9]+){9}$/;//<--- con esto vamos a validar el numero
+    var expresionRegular2=/\s/;//<--- con esto vamos a validar que no tenga espacios en blanco
    
+    if(numeroTelefono.value==''){
+        document.getElementById("mensajeNumero").innerHTML = "Campo Obligatorio";
+    }else if(expresionRegular2.test(numeroTelefono.value)){
+        document.getElementById("mensajeNumero").innerHTML = "No se permite espacios en blanco";
+    }else if(expresionRegular1.test(numeroTelefono.value)){
+        document.getElementById("mensajeNumero").innerHTML = "Número correcto";
+  }
+}
+   */

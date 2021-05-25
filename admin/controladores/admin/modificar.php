@@ -40,7 +40,7 @@
     } else { 
     echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>"; 
     }
-     echo "Se ha actualizado los datos personales correctamemte!!!<br>"; 
+    header("location:../../../public/vista/Ventana_admin.php"); 
  } else { 
  echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>"; 
  }

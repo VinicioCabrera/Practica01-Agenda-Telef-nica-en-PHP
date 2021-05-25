@@ -11,16 +11,21 @@
 <header>
         <h1>LISTA DE TELÉFONOS</h1>
     </header>
-    <form  onsubmit="return buscarPorTelefono()()">
+    <form  onsubmit="return buscarPorTelefono()">
 
     <div id="boton" >   
-    <input type="button" id="agregar" name="agregar" value="AGREGAR" onclick="location.href='Ventana_Agregar_telefono.php';">
+    <!-- <input type="button" id="agregar" name="agregar" value="AGREGAR" onclick="location.href='Ventana_Agregar_telefono.php';"> -->
     <input type="text" id="telefono" name="telefono" >
     <input type="button" id="buscar" name="buscar" value="BUSCAR" onclick="buscarPorTelefono()">
     </div>
     </form>
     <div id="informacion"> </div>
     <br>
+    <form id="mandar" method="POST" action="Ventana_Agregar_telefono.php">
+    <?php echo'<input type="hidden" id="codigo" name="codigo" value="'.$_POST['codigo'].'">' ?> 
+    <input type="submit" id="agregar" name="agregar" value="AGREGAR" >
+    
+
     <table style="width:100% " >
     <tr> 
         <th><font color=#FFFFFF>Tipo Teléfono</th>
@@ -29,26 +34,19 @@
     </tr> 
 
  <?php
- 
+ $codigo=$_POST['codigo'];
  include '../../../config/ConexionBD.php'; 
- $consulta="SELECT * FROM usuario ";
-  $res=$conn->query($consulta);
-  if($res->num_rows>0){
-     while($row = $res->fetch_assoc()){
-         $codigo = ($row["usu_codigo"]);
-     }
-  }
  
 $sql = "SELECT * FROM telefono where usu_codigo='$codigo'";
 
  $result = $conn->query($sql);
  while($row = $result->fetch_assoc()) {
-
+ 
  echo "<tr>";
  echo " <td><font color=#FFFFFF>" . $row['tel_tipo_telefono'] . "</td>";
  echo " <td><font color=#FFFFFF>" . $row['tel_operadora'] ."</td>";
  echo " <td><font color=#FFFFFF>" . $row['tel_numero'] . "</td>";
- echo " <td> <a = href='Ventana_Modificar_telefono.php?codigo=" . $row['tel_codigo']."'>Actualizar</a> </td>";
+ echo " <td> <a = href='Ventana_Modificar_telefono.php?codigo=" . $row['usu_codigo']."&codigo1=".$row['tel_codigo']."'>Actualizar</a> </td>";
  echo " <td> <a = href='Ventana_Eliminar_telefono.php?codigo=" . $row['tel_codigo']."'>Eliminar</a> </td>";
  echo "</tr>";
  }

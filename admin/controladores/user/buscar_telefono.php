@@ -7,9 +7,6 @@
  
  $sql = "SELECT * FROM telefono WHERE tel_numero='$telefono'";
 
- 
-
-
 //cambiar la consulta para puede buscar por ocurrencias de letras
  $result = $conn->query($sql);
  
@@ -24,7 +21,6 @@
 $codigo=$row['tel_codigo'];
 $sql1="SELECT * FROM telefono where tel_codigo=$codigo";
 $conn->query($sql1);
-echo($sql1);
  echo "<tr>"; 
  echo " <td><font color=#FFFFFF>" . $row['tel_tipo_telefono'] . "</td>";
  echo " <td><font color=#FFFFFF>" . $row['tel_operadora'] ."</td>";
@@ -34,7 +30,7 @@ echo($sql1);
 } 
  } else { 
  echo "<tr>";
- echo " <td colspan='9'> No existen usuarios registradas en el sistema </td>";
+ echo " <td colspan='3'> No existen teléfonos registrados en el sistema </td>";
  echo "</tr>"; 
  }
  echo "</table>";

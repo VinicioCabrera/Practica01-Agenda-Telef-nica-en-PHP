@@ -46,14 +46,14 @@
  echo " <td><font color=#FFFFFF>" . $row['usu_direccion'] . "</td>";
  echo " <td><font color=#FFFFFF>" . $row['usu_tipo_persona'] . "</td>";
  echo " <td><font color=#FFFFFF>" . $row['usu_correo'] . "</td>"; 
- echo " <td> <a href='../../admin/vista/admin/Ventana_Modificar.php?codigo=" . $row['usu_codigo']."'>Actualizar</a> </td>";
- echo " <td> <a href='../../admin/vista/admin/Ventana_Eliminar.php?codigo=" . $row['usu_codigo'] ."'>Eliminar</a> </td>";
- echo " <td> <a href='../../admin/vista/admin/cambiar_contrasena.php?codigo=". $row['usu_codigo'] ."'>Cambiar Contraseña</a> </td>";
+ echo " <td><a href='../../admin/vista/admin/Ventana_Modificar.php?codigo=" . $row['usu_codigo']."'><font color=#AAFF>Actualizar</a> </td>";
+ echo " <td> <a href='../../admin/vista/admin/Ventana_Eliminar.php?codigo=" . $row['usu_codigo'] ."'><font color=#AAFF>Eliminar</a> </td>";
+ echo " <td> <a href='../../admin/vista/admin/cambiar_contrasena.php?codigo=". $row['usu_codigo'] ."'><font color=#AAFF>Cambiar Contraseña</a> </td>";
  echo "</tr>";
  }
  } else {
  echo "<tr>";
- echo " <td colspan='6'> No existen usuarios registradas en el sistema </td>";
+ echo " <td colspan='6'>No existen usuarios registradas en el sistema</td>";
  echo "</tr>";
  }
 

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script type="text/javascript" src="validaciones_Usuario.js"></script>
     <link rel="stylesheet" href="../../../public/vista/Estilos/Estilo_crear_usuario.css">
     <link rel="icon" type="image/png" href="../../public/vista/imagenes/icono.png" sizes="16x16">
     <title>MODIFICAR</title>
@@ -26,15 +27,15 @@
 <form id="formulario" method="POST" action="../../controladores/admin/modificar.php" >
 <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
  <label for="cedula">Cedula (*)</label>
- <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>"
-required placeholder="Ingrese la cedula ..."/>
+ <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>"onkeyup="return validar(this)"
+disabled />
  <br>
  <label for="nombres">Nombres (*)</label>
  <input type="text" id="nombres" name="nombres" value="<?php echo $row["usu_nombres"]; 
-?>" required placeholder="Ingrese los dos nombres ..."/> <br>
+?>"  onkeyup="return validarnombres(this)"  required placeholder="Ingrese los dos nombres ..."/> <br>
  <label for="apellidos">Apelidos (*)</label>
  <input type="text" id="apellidos" name="apellidos" value="<?php echo $row["usu_apellidos"]; 
-?>" required placeholder="Ingrese los dos apellidos ..."/>
+?>" onkeyup="return validarapellidos(this)" required placeholder="Ingrese los dos apellidos ..."/>
  <br>
  <label for="direccion">Dirección (*)</label>
  <input type="text" id="direccion" name="direccion" value="<?php echo $row["usu_direccion"]; 
@@ -50,7 +51,12 @@ required placeholder="Ingrese la cedula ..."/>
      }else if($row["tel_tipo_telefono"]=="CONVENCIONAL"){
         echo("<option >CONVENCIONAL</option> "); 
         echo("<option >CELULAR</option> ");
+     }else {
+        echo("<option > </option>");
+         echo("<option >CONVENCIONAL</option>");
+         echo("<option >CELULAR</option> ");
      }
+     
 ?>
 </select>
 <span id="mensajeTipo" class="error"></span>
@@ -88,7 +94,7 @@ required placeholder="Ingrese la cedula ..."/>
 </select>
  <br>
  <label for="correo">Correo electrónico (*)</label>
- <input type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>"
+ <input type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>"  onkeyup="return validarEmail(this)"
 required placeholder="Ingrese el correo electrónico ..."/>
  <br>
  <div id="boton">

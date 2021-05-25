@@ -28,7 +28,7 @@
 <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
  <label for="cedula">Cedula (*)</label>
  <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>"onkeyup="return validar(this)"
-disabled />
+ disabled/>
  <br>
  <label for="nombres">Nombres (*)</label>
  <input type="text" id="nombres" name="nombres" value="<?php echo $row["usu_nombres"]; 

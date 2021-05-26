@@ -137,8 +137,20 @@ c.	Los usuarios con rol de “user” pueden agregar, modificar, eliminar, busca
 •	Un usuario “anónimo”, es decir, un usuario que no ha iniciado sesión puede acceder únicamente a los archivos de la carpeta pública. 
 •	Un usuario con rol de “admin” puede acceder únicamente a los archivos de la carpeta admin ® vista ® admin; y admin ® controladores ® admin  
 •	Un usuario con rol de “user” puede acceder únicamente a los archivos de la carpeta admin ® vista ® user; y admin ® controladores ® user 
+
+![47](https://user-images.githubusercontent.com/49033767/119588366-4547a780-bd96-11eb-989d-42ba79d1d2f0.png)
+
+![48](https://user-images.githubusercontent.com/49033767/119588367-45e03e00-bd96-11eb-9e7d-7f8ce21da812.png)
+
+![49](https://user-images.githubusercontent.com/49033767/119588369-4678d480-bd96-11eb-882f-8b73fc1933b2.png)
+
+![50](https://user-images.githubusercontent.com/49033767/119588371-4678d480-bd96-11eb-9dfd-7c8918acafb7.png)
+
+
 La parte pública (usuario anónimos) y privada (usuario registrado) ha sido descrita en los requisitos antes planteados. Se debe generar una página con la experiencia e interfaz de usuario apropiada, como la que se muestra a continuación: 
-Fig 1. Pagina pública index.html propuesta para el sistema de agenda telefónica  	
+Fig 1. Pagina pública index.html propuesta para el sistema de agenda telefónica 
+
+![51](https://user-images.githubusercontent.com/49033767/119588372-47116b00-bd96-11eb-8fc7-8ac87d97c52d.jpg)
 
                                                                                 ACTIVIDADES POR DESARROLLAR  
 
